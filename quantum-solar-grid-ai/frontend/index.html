@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Solar Grid AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Quantum Solar Grid AI</h1>
+            <p class="subtitle">Quantum-powered energy switching demo</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="stats-row">
+            <div class="stat-card">
+                <div class="stat-label">Solar Generation</div>
+                <div class="stat-value" id="solar-generation">--</div>
+                <div class="stat-unit">kWh</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Home Consumption</div>
+                <div class="stat-value" id="consumption">--</div>
+                <div class="stat-unit">kWh</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Battery Level</div>
+                <div class="stat-value" id="battery-level">--</div>
+                <div class="stat-unit">%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Grid Price</div>
+                <div class="stat-value" id="grid-price">--</div>
+                <div class="stat-unit">₹/kWh</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Temperature</div>
+                <div class="stat-value" id="temperature">--</div>
+                <div class="stat-unit">°C</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Weather</div>
+                <div class="stat-value" id="weather-condition">--</div>
+                <div class="stat-unit" id="weather-description">--</div>
+            </div>
+        </section>
+
+        <section class="decision-row">
+            <div class="decision-panel">
+                <div class="decision-label">System Decision</div>
+                <div class="decision-value" id="decision">--</div>
+                <button id="run-optimization">Run Quantum Optimization</button>
+                <div class="decision-hint">Click to re-run the quantum optimizer and update the grid strategy.</div>
+            </div>
+        </section>
+
+        <section class="charts-row">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <div class="chart-title">Solar Generation</div>
+                </div>
+                <canvas id="solarChart" height="200"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-header">
+                    <div class="chart-title">Home Consumption</div>
+                </div>
+                <canvas id="consumptionChart" height="200"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
